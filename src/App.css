@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0 0rem 0;
+}
+.navbar-img {
+  margin: 0;
+}
+.navbar-img img {
+  width: 100px;
+}
+
+.headlist {
+  list-style-type: none;
+  padding-left: 0;
+}
+.headlist a {
+  text-decoration: none;
+  color: white;
+}
+.headlist-item {
+  color: white;
+  display: inline-block;
+  padding: 0 18px;
+  font-size: 18px;
+}
+.search {
+  padding-top: 15px;
+  color: white;
+  margin: 0;
+}
+.main {
+  background-image: url("assets/fashiontastic-background.jpg");
+  background-size: cover;
+  padding-bottom: 32rem;
+  padding-top: 10rem;
+  padding-left: 10rem;
+}
+.main-h4{
+  font-size: 32px;
+}
+.latest-text {
+  font-size: 32px;
+  padding-top: 2rem;
+
+  padding-left: 0;
+  font-weight: 600;
+}
+.product-cards {
+  display: flex;
+  gap: 15px;
+}
+.item-card {
+  background-image: linear-gradient(
+    rgb(18, 18, 18),
+    rgb(71, 4, 4),
+    rgb(18, 18, 18)
+  );
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 20rem;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 3px;
+}
+.deal-heading{
+  padding-bottom: 16px;
+}
+.deals{
+padding: 15px;
+
+}
+.deals-img img{
+  border-radius: 5px;
+  width: 100%;
+} 
+.brand-heading{
+  font-size: 32px;
+  font-weight: 600;
+  padding: 3rem;
+}
+.logo-item img{
+  padding: 15px;
+  width: 100%;
+}
+.sales-heading{
+  font-size: 32px;
+  font-weight: 600;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.sales-content{
+  display: flex;
+  gap: 15px;
+  padding-bottom: 5em;
+  border-bottom: 1px solid white;
+}
+.sales-img img{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.sales-card{
+  background-image: linear-gradient(rgb(18, 18, 18),  rgb(71, 4, 4),rgb(18, 18, 18));
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 20rem;
+}
+.foot-h5{
+  padding: 0 25px 15px 15px;
+  font-size: 24px;
+}
+
+.foot-list-item{
+  list-style-type: none !important;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid white;
+  padding-left: 0;
+}
+.input{
+  height: 50px;
+  width: 100%;
+  border: 0px solid black;
+}
+.footer-link{
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid white;
+  padding: 20px 10px 10px 10px;
+  border-bottom: 1px solid white;
+}
