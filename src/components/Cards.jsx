@@ -17,7 +17,7 @@ function Cards() {
           <div className="container">
             <div class="latest-products" id="womens">
               <div class="latest-text text-light">
-                OUR LATEST PRODUCTS AND NEW ARRIVALS
+                OUR LATEST PRODUCTS AND NEW
                 <p className="text-light">Items in cart:{CartItem}</p>
               </div>
 
