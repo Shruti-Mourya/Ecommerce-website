@@ -7,7 +7,7 @@ function Button() {
     <>
      
       <button
-        class="btn bg-danger rounded text-light"
+        className="btn bg-danger rounded text-light"
         onClick={() => {
           setCartItem(CartItem + 1);
         }}

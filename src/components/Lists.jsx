@@ -1,23 +1,19 @@
+import { Link } from "react-router-dom";
+
 function Lists() {
   return (
     <>
-      <ul class="headlist">
-        <li class="headlist-item">
-          <a href="">HOME</a>
+      <ul className="headlist">
+        <li className="headlist-item">
+          <Link to="/">HOME</Link>
         </li>
-        <li class="headlist-item">
-          <a href="">ABOUT</a>
+        <li className="headlist-item">
+          <Link to="/About">ABOUT</Link>
         </li>
-        <li class="headlist-item">
-          <a href="">MENS</a>
-        </li>
-        <li class="headlist-item">
-          <a href="">WOMENS</a>
-        </li>
-        <li class="headlist-item">
+        <li className="headlist-item">
           <a href="">REVIEWS</a>
         </li>
-        <li class="headlist-item">
+        <li className="headlist-item">
           <a href="">CONTACT</a>
         </li>
       </ul>

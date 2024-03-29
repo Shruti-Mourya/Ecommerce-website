@@ -6,7 +6,7 @@ function Front(props) {
       <section>
         <div className="main">
           <div className="main-text">
-            <h4 class="main-h4 text-light">
+            <h4 className="main-h4 text-light">
               THE ONE STOP SOLUTION FOR ALL YOUR FASHION NEEDS...
               {props.title} {props.sample}
             </h4>

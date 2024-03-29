@@ -1,59 +1,47 @@
 import logoimage from "../assets/logo-fashion.png";
+import { HANDLE_SEARCH } from "../redux/Action";
 import Lists from "./Lists";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+function Navbar() {
+  const [Searchkey, setSearchkey] = useState("");
+  const { cartList } = useSelector(({ product }) => product);
+  const dispatch = useDispatch();
 
-function Navbar({ type }) {
-  let numVarOrg = useState(5);
-  let [numVar, setNumVar] = useState(5);
+  const handleSearch = (e) => {
+    const payload = { Searchkey: e.target.value };
+    setSearchkey(e.target.value);
+    dispatch({ type: HANDLE_SEARCH, payload });
+  };
 
   return (
     <>
-      <section>
-        <div className="container-fluid bg-dark">
-          <div className="container">
+      <section className="navbar-head">
+        <div className="container-fluid  bg-dark ">
+          <div className="container navbar-body">
             <header>
               <div className="navbar-img">
                 <img src={logoimage} alt="Logo" />
               </div>
               <div className="navbar">
                 <Lists />
-
-                {/* <ul class="headlist">
-                  <li class="headlist-item">
-                    <a href="">HOME</a>
-                  </li>
-                  <li class="headlist-item">
-                    <a href="">ABOUT</a>
-                  </li>
-                  <li class="headlist-item">
-                    <a href="">MENS</a>
-                  </li>
-                  <li class="headlist-item">
-                    <a href="">WOMENS</a>
-                  </li>
-                  <li class="headlist-item">
-                    <a href="">REVIEWS</a>
-                  </li>
-                  <li class="headlist-item">
-                    <a href="">CONTACT</a>
-                  </li>
-                </ul> */}
               </div>
-              <div className="fas fa-search text-light search"></div>
+
+              <input
+                type="text"
+                placeholder="Search here...."
+                className="searchbar"
+                value={Searchkey}
+                onChange={handleSearch}
+              />
+              <Link to="Cart">
+                <i className="fa-solid fa-cart-shopping text-light trolly"></i>
+              </Link>
+              <div className="text-light cartcount">{cartList.length}</div>
             </header>
           </div>
         </div>
-        <div>
-          <p>{numVar}</p>
-        </div>
-        <button
-          class="btn bg-danger rounded text-light"
-          onClick={() => {
-            setNumVar(numVar + 1);
-          }}
-        >
-          Increase number
-        </button>
       </section>
     </>
   );

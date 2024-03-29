@@ -1,30 +1,26 @@
+import React from "react";
 import "./App.css";
 import "https://kit.fontawesome.com/0d42d3538d.js";
 import "./bootstrap.css";
 import Navbar from "./components/Navbar";
-import Front from "./components/Front";
-import Cards from "./components/Cards";
-import Deals from "./components/Deals";
-import Brands from "./components/Brands";
-import Solds from "./components/Solds";
 import Foot from "./components/Foot";
-
-
+import { Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+// import { store } from "./store/store";
+import { persistedStore, store } from "./store/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Front /*title="sample title"  sample="shruti"*/ />
-     <Cards />
-     <Deals />
-     <Brands />
-     <Solds />
-      <Foot />
-     
-       
-     
-    </>
+    <Provider store={store}>
+      <PersistGate persistor={persistedStore}>
+        <div>
+          <Navbar />
+          <Outlet />
+          <Foot />
+        </div>
+      </PersistGate>
+    </Provider>
   );
 }
 
